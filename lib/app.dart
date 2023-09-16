@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:qiita_app/screen/top_page.dart';
+import 'package:qiita_app/screen/top_page_screen.dart';
 
 class QiitaApp extends StatelessWidget {
   const QiitaApp({Key? key}) : super(key: key);
