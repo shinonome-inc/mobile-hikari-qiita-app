@@ -18,8 +18,6 @@ class CustomBottomNavigationBar extends StatelessWidget {
       onTap: onTap,
       selectedLabelStyle: const TextStyle(color: Colors.lightGreen),
       unselectedLabelStyle: const TextStyle(color: Colors.grey),
-      selectedIconTheme: const IconThemeData(color: Colors.lightGreen),
-      unselectedIconTheme: const IconThemeData(color: Colors.grey),
       items: [
         BottomNavigationBarItem(
           icon: SvgPicture.asset(
