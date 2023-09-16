@@ -5,15 +5,15 @@ import 'package:qiita_app/screen/settings.dart';
 import 'package:qiita_app/screen/tag.dart';
 import 'package:qiita_app/view/bottom_navigation_bar.dart';
 
-class Pages extends StatefulWidget {
-  const Pages({Key? key, required String title}) : super(key: key);
+class HomeRootScreen extends StatefulWidget {
+  const HomeRootScreen({Key? key, required String title}) : super(key: key);
 
   @override
   // ignore: library_private_types_in_public_api
   _QiitaAppState createState() => _QiitaAppState();
 }
 
-class _QiitaAppState extends State<Pages> {
+class _QiitaAppState extends State<HomeRootScreen> {
   int _currentIndex = 0;
   String screenName = "Feed";
 

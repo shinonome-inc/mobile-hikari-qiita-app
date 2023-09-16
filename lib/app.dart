@@ -11,6 +11,6 @@ class QiitaApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const Scaffold(body: TopPage(title: "aaa")));
+        home: const Scaffold(body: TopPageScreen(title: "aaa")));
   }
 }
