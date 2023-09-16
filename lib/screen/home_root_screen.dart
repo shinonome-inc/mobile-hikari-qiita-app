@@ -27,7 +27,6 @@ class _QiitaAppState extends State<HomeRootScreen> {
   void _onItemTapped(int index) {
     setState(() {
       _currentIndex = index;
-      screenName = _pages[index].toString();
     });
   }
 
@@ -43,7 +42,7 @@ class _QiitaAppState extends State<HomeRootScreen> {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text(screenName),
+          title: const Text("screenName"),
         ),
         body: _pages[_currentIndex],
         bottomNavigationBar: CustomBottomNavigationBar(
