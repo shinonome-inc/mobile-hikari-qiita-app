@@ -9,12 +9,12 @@ final homeRootNotifierProvider = StateNotifierProvider<HomeRootNotifier, aaa>(
 class CustomBottomNavigationBar extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final index = ref.watch(homeRootNotifierProvider);
+    final homeRootProvider = ref.watch(homeRootNotifierProvider);
     final homeRootNotifier = ref.watch(homeRootNotifierProvider.notifier);
 
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
-      currentIndex: index.index,
+      currentIndex: homeRootProvider.index,
       onTap: homeRootNotifier.onTappedNavigationBar,
       selectedLabelStyle: const TextStyle(color: Colors.lightGreen),
       unselectedLabelStyle: const TextStyle(color: Colors.grey),
@@ -25,7 +25,8 @@ class CustomBottomNavigationBar extends ConsumerWidget {
             width: 24,
             height: 24,
             // ignore: deprecated_member_use
-            color: index.index == 0 ? Colors.lightGreen : Colors.grey,
+            color:
+                homeRootProvider.index == 0 ? Colors.lightGreen : Colors.grey,
           ),
           label: "Feed",
         ),
@@ -35,7 +36,8 @@ class CustomBottomNavigationBar extends ConsumerWidget {
             width: 24,
             height: 24,
             // ignore: deprecated_member_use
-            color: index.index == 1 ? Colors.lightGreen : Colors.grey,
+            color:
+                homeRootProvider.index == 1 ? Colors.lightGreen : Colors.grey,
           ),
           label: 'Tag',
         ),
@@ -45,7 +47,8 @@ class CustomBottomNavigationBar extends ConsumerWidget {
             width: 24,
             height: 24,
             // ignore: deprecated_member_use
-            color: index.index == 2 ? Colors.lightGreen : Colors.grey,
+            color:
+                homeRootProvider.index == 2 ? Colors.lightGreen : Colors.grey,
           ),
           label: 'User',
         ),
@@ -55,7 +58,8 @@ class CustomBottomNavigationBar extends ConsumerWidget {
             width: 24,
             height: 24,
             // ignore: deprecated_member_use
-            color: index.index == 3 ? Colors.lightGreen : Colors.grey,
+            color:
+                homeRootProvider.index == 3 ? Colors.lightGreen : Colors.grey,
           ),
           label: 'Settings',
         ),

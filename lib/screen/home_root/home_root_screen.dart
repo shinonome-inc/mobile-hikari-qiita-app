@@ -5,7 +5,7 @@ import 'package:qiita_app/screen/feed.dart';
 import 'package:qiita_app/screen/my_page.dart';
 import 'package:qiita_app/screen/settings.dart';
 import 'package:qiita_app/screen/tag.dart';
-import 'package:qiita_app/view/bottom_navigation_bar.dart';
+import 'package:qiita_app/view/bottom_navigation_bar/bottom_navigation_bar.dart';
 
 part 'home_root_body.dart';
 
@@ -13,12 +13,12 @@ final homeRootNotifierProvider = StateNotifierProvider<HomeRootNotifier, aaa>(
     (ref) => HomeRootNotifier(aaa()));
 
 class HomeRootScreen extends ConsumerWidget {
-  String screenName = "Feed";
-
-  HomeRootScreen({super.key});
+  const HomeRootScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final homeRootProvider = ref.watch(homeRootNotifierProvider);
+
     return MaterialApp(
       title: 'Qiita App',
       theme: ThemeData(
@@ -29,7 +29,8 @@ class HomeRootScreen extends ConsumerWidget {
       ),
       home: Scaffold(
           appBar: AppBar(
-            title: const Text("screenName"),
+            // @TODO: screenNameを動的に切り替えたい
+            title: Text(homeRootProvider.screenName),
           ),
           body: const _Body(),
           //  _pages[index.index],
