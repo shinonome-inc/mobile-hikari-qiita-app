@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:qiita_app/screen/home_root_screen.dart';
+import 'package:qiita_app/screen/home_root/home_root_screen.dart';
 
 class TopPageScreen extends StatelessWidget {
   const TopPageScreen({Key? key, required this.title}) : super(key: key);
@@ -61,9 +61,7 @@ class TopPageScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const HomeRootScreen(
-                              title: 'Feed',
-                            ),
+                            builder: (context) => HomeRootScreen(),
                           ),
                         );
                       },

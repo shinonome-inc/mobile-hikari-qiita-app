@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:qiita_app/provider/home_root/home_root_notifier.dart';
 
-class CustomBottomNavigationBar extends StatelessWidget {
-  final int currentIndex;
-  final Function(int) onTap;
+final homeRootNotifierProvider = StateNotifierProvider<HomeRootNotifier, aaa>(
+    (ref) => HomeRootNotifier(aaa()));
 
-  CustomBottomNavigationBar({
-    required this.currentIndex,
-    required this.onTap,
-  });
-
+class CustomBottomNavigationBar extends ConsumerWidget {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final index = ref.watch(homeRootNotifierProvider);
+    final homeRootNotifier = ref.watch(homeRootNotifierProvider.notifier);
+
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
-      currentIndex: currentIndex,
-      onTap: onTap,
+      currentIndex: index.index,
+      onTap: homeRootNotifier.onTappedNavigationBar,
       selectedLabelStyle: const TextStyle(color: Colors.lightGreen),
       unselectedLabelStyle: const TextStyle(color: Colors.grey),
       items: [
@@ -25,7 +25,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
             width: 24,
             height: 24,
             // ignore: deprecated_member_use
-            color: currentIndex == 0 ? Colors.lightGreen : Colors.grey,
+            color: index.index == 0 ? Colors.lightGreen : Colors.grey,
           ),
           label: "Feed",
         ),
@@ -35,7 +35,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
             width: 24,
             height: 24,
             // ignore: deprecated_member_use
-            color: currentIndex == 1 ? Colors.lightGreen : Colors.grey,
+            color: index.index == 1 ? Colors.lightGreen : Colors.grey,
           ),
           label: 'Tag',
         ),
@@ -45,7 +45,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
             width: 24,
             height: 24,
             // ignore: deprecated_member_use
-            color: currentIndex == 2 ? Colors.lightGreen : Colors.grey,
+            color: index.index == 2 ? Colors.lightGreen : Colors.grey,
           ),
           label: 'User',
         ),
@@ -55,7 +55,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
             width: 24,
             height: 24,
             // ignore: deprecated_member_use
-            color: currentIndex == 3 ? Colors.lightGreen : Colors.grey,
+            color: index.index == 3 ? Colors.lightGreen : Colors.grey,
           ),
           label: 'Settings',
         ),
