@@ -10,12 +10,10 @@ class CustomBottomNavigationBar extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final homeRootProvider = ref.watch(homeRootNotifierProvider);
-    final homeRootNotifier = ref.watch(homeRootNotifierProvider.notifier);
-
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
       currentIndex: homeRootProvider.index,
-      onTap: homeRootNotifier.onTappedNavigationBar,
+      onTap: ref.read(homeRootNotifierProvider.notifier).onTappedNavigationBar,
       selectedLabelStyle: const TextStyle(color: Colors.lightGreen),
       unselectedLabelStyle: const TextStyle(color: Colors.grey),
       items: [

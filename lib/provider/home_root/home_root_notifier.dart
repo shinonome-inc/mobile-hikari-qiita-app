@@ -11,8 +11,17 @@ class aaa {
   }
 }
 
+final homeRootNotifierProvider = StateNotifierProvider<HomeRootNotifier, aaa>(
+    (ref) => HomeRootNotifier(aaa()));
+
 class HomeRootNotifier extends StateNotifier<aaa> {
   HomeRootNotifier(aaa state) : super(state);
+  void init() {
+    state = state.copyWith(
+      index: 0,
+      screenName: "aaa",
+    );
+  }
 
   void onTappedNavigationBar(int index) {
     state = state.copyWith(
