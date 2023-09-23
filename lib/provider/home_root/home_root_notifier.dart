@@ -1,32 +1,26 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:qiita_app/provider/home_root/home_root_state.dart';
 
-class aaa {
-  String screenName = "aaa";
-  int index = 0;
+final HomeRootNotifierProvider =
+    StateNotifierProvider<HomeRootNotifier, HomeRootScreenState>(
+  (ref) => HomeRootNotifier(
+    const HomeRootScreenState(
+      currentIndex: 0,
+    ),
+  ),
+);
 
-  aaa copyWith({String? screenName, int? index}) {
-    return aaa()
-      ..screenName = screenName ?? this.screenName
-      ..index = index ?? this.index;
-  }
-}
-
-final homeRootNotifierProvider = StateNotifierProvider<HomeRootNotifier, aaa>(
-    (ref) => HomeRootNotifier(aaa()));
-
-class HomeRootNotifier extends StateNotifier<aaa> {
-  HomeRootNotifier(aaa state) : super(state);
+class HomeRootNotifier extends StateNotifier<HomeRootScreenState> {
+  HomeRootNotifier(HomeRootScreenState state) : super(state);
   void init() {
     state = state.copyWith(
-      index: 0,
-      screenName: "aaa",
+      currentIndex: 0,
     );
   }
 
   void onTappedNavigationBar(int index) {
     state = state.copyWith(
-      index: index,
-      screenName: "aaa",
+      currentIndex: index,
     );
   }
 }

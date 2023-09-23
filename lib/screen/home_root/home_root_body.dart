@@ -7,11 +7,11 @@ class _Body extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final homeRoootProvider = ref.watch(homeRootNotifierProvider);
     // @TODO: bottombarがタップされるたびにscreenを切り替えたい（indexが動いていない）
-    print(homeRoootProvider.index);
+    print(homeRoootProvider.currentIndex);
 
     return IndexedStack(
       sizing: StackFit.expand,
-      index: homeRoootProvider.index,
+      index: homeRoootProvider.currentIndex,
       children: const [
         Feed(title: 'Feed'),
         Tag(title: 'Tag'),

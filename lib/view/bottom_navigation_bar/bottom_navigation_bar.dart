@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:qiita_app/provider/home_root/home_root_notifier.dart';
+import 'package:qiita_app/provider/home_root/home_root_state.dart';
 
-final homeRootNotifierProvider = StateNotifierProvider<HomeRootNotifier, aaa>(
-    (ref) => HomeRootNotifier(aaa()));
+final homeRootNotifierProvider =
+    StateNotifierProvider<HomeRootNotifier, HomeRootScreenState>(
+        (ref) => HomeRootNotifier(const HomeRootScreenState(currentIndex: 0)));
 
 class CustomBottomNavigationBar extends ConsumerWidget {
   @override
@@ -12,7 +14,7 @@ class CustomBottomNavigationBar extends ConsumerWidget {
     final homeRootProvider = ref.watch(homeRootNotifierProvider);
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
-      currentIndex: homeRootProvider.index,
+      currentIndex: homeRootProvider.currentIndex,
       onTap: ref.read(homeRootNotifierProvider.notifier).onTappedNavigationBar,
       selectedLabelStyle: const TextStyle(color: Colors.lightGreen),
       unselectedLabelStyle: const TextStyle(color: Colors.grey),
@@ -23,8 +25,9 @@ class CustomBottomNavigationBar extends ConsumerWidget {
             width: 24,
             height: 24,
             // ignore: deprecated_member_use
-            color:
-                homeRootProvider.index == 0 ? Colors.lightGreen : Colors.grey,
+            color: homeRootProvider.currentIndex == 0
+                ? Colors.lightGreen
+                : Colors.grey,
           ),
           label: "Feed",
         ),
@@ -34,8 +37,9 @@ class CustomBottomNavigationBar extends ConsumerWidget {
             width: 24,
             height: 24,
             // ignore: deprecated_member_use
-            color:
-                homeRootProvider.index == 1 ? Colors.lightGreen : Colors.grey,
+            color: homeRootProvider.currentIndex == 1
+                ? Colors.lightGreen
+                : Colors.grey,
           ),
           label: 'Tag',
         ),
@@ -45,8 +49,9 @@ class CustomBottomNavigationBar extends ConsumerWidget {
             width: 24,
             height: 24,
             // ignore: deprecated_member_use
-            color:
-                homeRootProvider.index == 2 ? Colors.lightGreen : Colors.grey,
+            color: homeRootProvider.currentIndex == 2
+                ? Colors.lightGreen
+                : Colors.grey,
           ),
           label: 'User',
         ),
@@ -56,8 +61,9 @@ class CustomBottomNavigationBar extends ConsumerWidget {
             width: 24,
             height: 24,
             // ignore: deprecated_member_use
-            color:
-                homeRootProvider.index == 3 ? Colors.lightGreen : Colors.grey,
+            color: homeRootProvider.currentIndex == 3
+                ? Colors.lightGreen
+                : Colors.grey,
           ),
           label: 'Settings',
         ),
