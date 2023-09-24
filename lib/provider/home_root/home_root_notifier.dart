@@ -1,26 +1,32 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:qiita_app/provider/home_root/home_root_state.dart';
 
-final homeRootNotifierProvider =
-    StateNotifierProvider<HomeRootNotifier, HomeRootScreenState>(
-  (ref) => HomeRootNotifier(
-    const HomeRootScreenState(
-      currentIndex: 0,
-    ),
-  ),
+enum ScreenType { feed, tag, user, settings }
+
+final homeRootProvider = StateNotifierProvider<HomeRootNotifier, ScreenType>(
+  (ref) => HomeRootNotifier(),
 );
 
-class HomeRootNotifier extends StateNotifier<HomeRootScreenState> {
-  HomeRootNotifier(HomeRootScreenState state) : super(state);
-  void init() {
-    state = state.copyWith(
-      currentIndex: 0,
-    );
+class HomeRootNotifier extends StateNotifier<ScreenType> {
+  HomeRootNotifier() : super(ScreenType.feed);
+  void changeScreen(int showCurrentIndex) {
+    state = ScreenType.values[showCurrentIndex];
   }
 
-  void onTappedNavigationBar(int index) {
-    state = state.copyWith(
-      currentIndex: index,
-    );
+  // screenTypeに応じてindexを返す
+  int showCurrentIndex(ScreenType screenType) {
+    switch (screenType) {
+      case ScreenType.feed:
+        return 0;
+      case ScreenType.tag:
+        return 1;
+      case ScreenType.user:
+        return 2;
+      case ScreenType.settings:
+        return 3;
+    }
+  }
+
+  String showScreenName() {
+    return state.toString().split('.').last;
   }
 }

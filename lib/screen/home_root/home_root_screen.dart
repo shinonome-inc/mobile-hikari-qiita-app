@@ -1,24 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:qiita_app/provider/home_root/home_root_notifier.dart';
-import 'package:qiita_app/provider/home_root/home_root_state.dart';
-import 'package:qiita_app/screen/feed.dart';
-import 'package:qiita_app/screen/my_page.dart';
-import 'package:qiita_app/screen/settings.dart';
-import 'package:qiita_app/screen/tag.dart';
-import 'package:qiita_app/view/bottom_navigation_bar/bottom_navigation_bar.dart';
+import 'package:qiita_app/screen/home_root/home_root_body.dart';
 
-part 'home_root_body.dart';
-
-final homeRootNotifierProvider =
-    StateNotifierProvider<HomeRootNotifier, HomeRootScreenState>(
-        (ref) => HomeRootNotifier(const HomeRootScreenState(currentIndex: 0)));
+part 'home_root_navigation_bar.dart';
 
 class HomeRootScreen extends ConsumerWidget {
   const HomeRootScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final homeRootProvider =
+        StateNotifierProvider<HomeRootNotifier, ScreenType>(
+      (ref) => HomeRootNotifier(),
+    );
     return MaterialApp(
       title: 'Qiita App',
       theme: ThemeData(
@@ -30,11 +26,12 @@ class HomeRootScreen extends ConsumerWidget {
       home: Scaffold(
           appBar: AppBar(
             // @TODO: screenNameを動的に切り替えたい
-            title: const Text("aaa"),
+            // showScreenNameにtitleがかわるようにする
+            title: Text(ref.watch(homeRootProvider.notifier).showScreenName()),
           ),
           body: const Body(),
           //  _pages[index.index],
-          bottomNavigationBar: const CustomBottomNavigationBar()),
+          bottomNavigationBar: _BottomNavigationBar()),
     );
   }
 }
