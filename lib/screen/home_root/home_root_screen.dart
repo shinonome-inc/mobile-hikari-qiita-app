@@ -32,9 +32,9 @@ class HomeRootScreen extends ConsumerWidget {
             // @TODO: screenNameを動的に切り替えたい
             title: const Text("aaa"),
           ),
-          body: const _Body(),
+          body: const Body(),
           //  _pages[index.index],
-          bottomNavigationBar: CustomBottomNavigationBar()),
+          bottomNavigationBar: const CustomBottomNavigationBar()),
     );
   }
 }

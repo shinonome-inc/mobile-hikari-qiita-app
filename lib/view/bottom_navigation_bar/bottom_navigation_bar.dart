@@ -9,6 +9,8 @@ final homeRootNotifierProvider =
         (ref) => HomeRootNotifier(const HomeRootScreenState(currentIndex: 0)));
 
 class CustomBottomNavigationBar extends ConsumerWidget {
+  const CustomBottomNavigationBar({super.key});
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final homeRootProvider = ref.watch(homeRootNotifierProvider);

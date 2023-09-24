@@ -1,17 +1,17 @@
 part of 'home_root_screen.dart';
 
-class _Body extends ConsumerWidget {
-  const _Body({Key? key}) : super(key: key);
+class Body extends ConsumerWidget {
+  const Body({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final homeRoootProvider = ref.watch(homeRootNotifierProvider);
+    final homeRootProvider = ref.watch(homeRootNotifierProvider);
     // @TODO: bottombarがタップされるたびにscreenを切り替えたい（indexが動いていない）
-    print(homeRoootProvider.currentIndex);
+    print(homeRootProvider.currentIndex);
 
     return IndexedStack(
       sizing: StackFit.expand,
-      index: homeRoootProvider.currentIndex,
+      index: homeRootProvider.currentIndex,
       children: const [
         Feed(title: 'Feed'),
         Tag(title: 'Tag'),

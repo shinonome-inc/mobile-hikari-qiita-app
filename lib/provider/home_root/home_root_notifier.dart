@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:qiita_app/provider/home_root/home_root_state.dart';
 
-final HomeRootNotifierProvider =
+final homeRootNotifierProvider =
     StateNotifierProvider<HomeRootNotifier, HomeRootScreenState>(
   (ref) => HomeRootNotifier(
     const HomeRootScreenState(
