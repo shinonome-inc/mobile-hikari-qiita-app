@@ -6,6 +6,12 @@ class Tag extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(I18n().labelTag);
+    return Scaffold(
+      body: Scaffold(
+        body: Center(
+          child: Text(I18n().labelTag),
+        ),
+      ),
+    );
   }
 }

@@ -6,6 +6,12 @@ class Settings extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(I18n().labelSettings);
+    return Scaffold(
+      body: Scaffold(
+        body: Center(
+          child: Text(I18n().labelSettings),
+        ),
+      ),
+    );
   }
 }
