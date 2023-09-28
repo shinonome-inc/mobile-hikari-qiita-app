@@ -25,8 +25,4 @@ class HomeRootNotifier extends StateNotifier<ScreenType> {
         return 3;
     }
   }
-
-  String showScreenName() {
-    return state.toString().split('.').last;
-  }
 }

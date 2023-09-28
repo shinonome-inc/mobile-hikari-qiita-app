@@ -11,10 +11,6 @@ class HomeRootScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final homeRootProvider =
-        StateNotifierProvider<HomeRootNotifier, ScreenType>(
-      (ref) => HomeRootNotifier(),
-    );
     return MaterialApp(
       title: 'Qiita App',
       theme: ThemeData(
@@ -24,11 +20,6 @@ class HomeRootScreen extends ConsumerWidget {
         ),
       ),
       home: Scaffold(
-          appBar: AppBar(
-            // @TODO: screenNameを動的に切り替えたい
-            // showScreenNameにtitleがかわるようにする
-            title: Text(ref.watch(homeRootProvider.notifier).showScreenName()),
-          ),
           body: const Body(),
           //  _pages[index.index],
           bottomNavigationBar: _BottomNavigationBar()),
