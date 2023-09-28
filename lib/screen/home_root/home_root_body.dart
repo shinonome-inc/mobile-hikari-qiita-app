@@ -14,10 +14,10 @@ class Body extends ConsumerWidget {
     final screen = ref.watch(homeRootProvider);
     final index = ref.watch(homeRootProvider.notifier).showCurrentIndex(screen);
     return IndexedStack(index: index, children: const [
-      Feed(title: 'a'),
-      Tag(title: 'a'),
-      MyPage(title: 'a'),
-      Settings(title: 'a')
+      Feed(),
+      Tag(),
+      MyPage(),
+      Settings(),
     ]);
   }
 }
