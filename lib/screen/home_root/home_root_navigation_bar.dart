@@ -24,7 +24,7 @@ class _BottomNavigationBar extends ConsumerWidget {
             // ignore: deprecated_member_use
             color: screenIndex == 0 ? Colors.lightGreen : Colors.grey,
           ),
-          label: "Feed",
+          label: I18n().labelFeedJapanese,
         ),
         BottomNavigationBarItem(
           icon: SvgPicture.asset(
@@ -34,7 +34,7 @@ class _BottomNavigationBar extends ConsumerWidget {
             // ignore: deprecated_member_use
             color: screenIndex == 1 ? Colors.lightGreen : Colors.grey,
           ),
-          label: 'Tag',
+          label: I18n().labelTagJapanese,
         ),
         BottomNavigationBarItem(
           icon: SvgPicture.asset(
@@ -44,7 +44,7 @@ class _BottomNavigationBar extends ConsumerWidget {
             // ignore: deprecated_member_use
             color: screenIndex == 2 ? Colors.lightGreen : Colors.grey,
           ),
-          label: 'User',
+          label: I18n().labelMyPageJapanese,
         ),
         BottomNavigationBarItem(
           icon: SvgPicture.asset(
@@ -54,7 +54,7 @@ class _BottomNavigationBar extends ConsumerWidget {
             // ignore: deprecated_member_use
             color: screenIndex == 3 ? Colors.lightGreen : Colors.grey,
           ),
-          label: 'Settings',
+          label: I18n().labelSettingsJapanese,
         ),
       ],
     );

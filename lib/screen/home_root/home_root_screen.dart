@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:qiita_app/provider/home_root/home_root_notifier.dart';
+import 'package:qiita_app/resource/intl_resource.dart';
 import 'package:qiita_app/screen/home_root/home_root_body.dart';
 
 part 'home_root_navigation_bar.dart';

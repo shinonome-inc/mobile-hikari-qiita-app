@@ -13,13 +13,17 @@ class I18n {
 
   // feed_page
   String get labelFeed => "Feed";
+  String get labelFeedJapanese => "フィード";
 
   // tag_page
   String get labelTag => "Tag";
+  String get labelTagJapanese => "タグ";
 
   // my_page
   String get labelMyPage => "MyPage";
+  String get labelMyPageJapanese => "マイページ";
 
   // settings_page
   String get labelSettings => "Settings";
+  String get labelSettingsJapanese => "設定";
 }
