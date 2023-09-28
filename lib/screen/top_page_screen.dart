@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:qiita_app/resource/intl_resource.dart';
 import 'package:qiita_app/screen/home_root/home_root_screen.dart';
 
 class TopPageScreen extends StatelessWidget {
@@ -31,18 +32,18 @@ class TopPageScreen extends StatelessWidget {
               child: Column(
                 children: [
                   const Spacer(flex: 1),
-                  const Text(
-                    "Qiita Feed App",
-                    style: TextStyle(
+                  Text(
+                    I18n().labelAppName,
+                    style: const TextStyle(
                       color: Colors.white,
                       fontSize: 36,
                       fontFamily: 'Pacifico-Regular',
                     ),
                   ),
                   const Gap(8),
-                  const Text(
-                    "-PlayGround-",
-                    style: TextStyle(fontSize: 14, color: Colors.white),
+                  Text(
+                    I18n().labelPlayGround,
+                    style: const TextStyle(fontSize: 14, color: Colors.white),
                   ),
                   const Spacer(flex: 2),
                   SizedBox(
@@ -65,9 +66,9 @@ class TopPageScreen extends StatelessWidget {
                           ),
                         );
                       },
-                      child: const Text(
-                        "ログイン",
-                        style: TextStyle(
+                      child: Text(
+                        I18n().labelLogin,
+                        style: const TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.w700,
                         ),
@@ -75,9 +76,9 @@ class TopPageScreen extends StatelessWidget {
                     ),
                   ),
                   const Gap(34),
-                  const Text(
-                    "ログインせずに利用する",
-                    style: TextStyle(
+                  Text(
+                    I18n().labelNotLogin,
+                    style: const TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.w700,
                     ),

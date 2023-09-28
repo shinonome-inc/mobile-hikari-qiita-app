@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qiita_app/resource/intl_resource.dart';
 
 class Feed extends StatelessWidget {
   const Feed({Key? key, required this.title}) : super(key: key);
@@ -7,6 +8,6 @@ class Feed extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text("Feed");
+    return Text(I18n().labelFeed);
   }
 }
