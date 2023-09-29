@@ -11,9 +11,8 @@ class Body extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final screen = ref.watch(homeRootProvider);
-    final index = ref.watch(homeRootProvider.notifier).showCurrentIndex(screen);
-    return IndexedStack(index: index, children: const [
+    final currentIndex = ref.watch(homeRootProvider).currentIndex;
+    return IndexedStack(index: currentIndex, children: const [
       Feed(),
       Tag(),
       MyPage(),
