@@ -1,14 +1,16 @@
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:qiita_app/provider/home_root/home_root_state.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-final homeRootProvider =
-    StateNotifierProvider<HomeRootNotifier, HomeRootScreenState>(
-  (ref) => HomeRootNotifier(),
-);
+part 'home_root_notifier.g.dart';
 
-class HomeRootNotifier extends StateNotifier<HomeRootScreenState> {
-  HomeRootNotifier() : super(const HomeRootScreenState(currentIndex: 0));
-  void changeScreen(int index) {
+@riverpod
+class HomeRootNotifier extends _$HomeRootNotifier {
+  @override
+  HomeRootScreenState build() {
+    return const HomeRootScreenState(currentIndex: 0);
+  }
+
+  void changeIndex(int index) {
     state = state.copyWith(currentIndex: index);
   }
 }

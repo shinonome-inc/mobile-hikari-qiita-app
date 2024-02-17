@@ -3,7 +3,8 @@ part of 'home_root_screen.dart';
 class _BottomNavigationBar extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final currentIndex = ref.watch(homeRootProvider).currentIndex;
+    final currentIndex = ref.watch(homeRootNotifierProvider).currentIndex;
+    final homeRootNotifier = ref.read(homeRootNotifierProvider.notifier);
 
     return Container(
       decoration: const BoxDecoration(
@@ -15,7 +16,7 @@ class _BottomNavigationBar extends ConsumerWidget {
         type: BottomNavigationBarType.fixed,
         currentIndex: currentIndex,
         onTap: (index) {
-          ref.read(homeRootProvider.notifier).changeScreen(index);
+          homeRootNotifier.changeIndex(index);
         },
         selectedLabelStyle: const TextStyle(color: Colors.lightGreen),
         unselectedLabelStyle: const TextStyle(color: Colors.grey),

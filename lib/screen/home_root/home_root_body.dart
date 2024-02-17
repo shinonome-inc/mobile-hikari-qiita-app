@@ -11,7 +11,7 @@ class HomeRootBody extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final currentIndex = ref.watch(homeRootProvider).currentIndex;
+    final currentIndex = ref.watch(homeRootNotifierProvider).currentIndex;
     return IndexedStack(index: currentIndex, children: const [
       Feed(),
       Tag(),
