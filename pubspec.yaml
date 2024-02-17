@@ -40,6 +40,9 @@ dependencies:
   riverpod_annotation: ^2.1.5
   freezed_annotation: ^2.4.1
   json_annotation: ^4.8.1
+  retrofit: ^4.1.0
+  flutter_dotenv: ^5.1.0
+  dio: ^5.4.0
 
 dev_dependencies:
   flutter_test:
@@ -55,6 +58,7 @@ dev_dependencies:
   riverpod_generator: ^2.3.2
   freezed: ^2.4.2
   json_serializable: ^6.7.1
+  retrofit_generator: ^8.1.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -66,6 +70,7 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
+    - .env
     - assets/images/background.png
     - assets/images/tab_icons/
 

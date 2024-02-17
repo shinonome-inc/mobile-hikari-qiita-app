@@ -1,4 +1,3 @@
-import 'package:qiita_app/entity/article/article.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:qiita_app/entity/user/user.dart';
 
