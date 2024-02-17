@@ -4,9 +4,7 @@ import 'package:qiita_app/resource/intl_resource.dart';
 import 'package:qiita_app/screen/home_root/home_root_screen.dart';
 
 class TopPageScreen extends StatelessWidget {
-  const TopPageScreen({Key? key, required this.title}) : super(key: key);
-
-  final String title;
+  const TopPageScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
