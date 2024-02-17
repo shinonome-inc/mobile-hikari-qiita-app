@@ -63,13 +63,10 @@ flutter:
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
-  uses-material-design: true
+  uses-material-design: trueß
   assets:
     - assets/images/background.png
-    - assets/images/List.svg
-    - assets/images/Tag.svg
-    - assets/images/User.svg
-    - assets/images/Settings.svg
+    - assets/images/tab_icons
 
   # To add assets to your application, add an assets section, like this:
   # assets:

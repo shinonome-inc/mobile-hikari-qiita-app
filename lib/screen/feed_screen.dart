@@ -7,10 +7,8 @@ class Feed extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Scaffold(
-        body: Center(
-          child: Text(I18n().labelFeed),
-        ),
+      body: Center(
+        child: Text(I18n().labelFeed),
       ),
     );
   }

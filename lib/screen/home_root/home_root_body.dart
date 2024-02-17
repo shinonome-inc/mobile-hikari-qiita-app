@@ -6,8 +6,8 @@ import 'package:qiita_app/screen/my_page_screen.dart';
 import 'package:qiita_app/screen/settings_screen.dart';
 import 'package:qiita_app/screen/tag_screen.dart';
 
-class Body extends ConsumerWidget {
-  const Body({Key? key}) : super(key: key);
+class HomeRootBody extends ConsumerWidget {
+  const HomeRootBody({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

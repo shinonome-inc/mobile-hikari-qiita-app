@@ -21,7 +21,7 @@ class HomeRootScreen extends ConsumerWidget {
         ),
       ),
       home: Scaffold(
-          body: const Body(),
+          body: const HomeRootBody(),
           //  _pages[index.index],
           bottomNavigationBar: _BottomNavigationBar()),
     );
