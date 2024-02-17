@@ -22,7 +22,7 @@ class _BottomNavigationBar extends ConsumerWidget {
         items: [
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
-              'assets/images/List.svg',
+              'assets/images/tab_icons/List.svg',
               width: 24,
               height: 24,
               // ignore: deprecated_member_use
@@ -32,7 +32,7 @@ class _BottomNavigationBar extends ConsumerWidget {
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
-              'assets/images/Tag.svg',
+              'assets/images/tab_icons/Tag.svg',
               width: 24,
               height: 24,
               // ignore: deprecated_member_use
@@ -42,7 +42,7 @@ class _BottomNavigationBar extends ConsumerWidget {
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
-              'assets/images/User.svg',
+              'assets/images/tab_icons/User.svg',
               width: 24,
               height: 24,
               // ignore: deprecated_member_use
@@ -52,7 +52,7 @@ class _BottomNavigationBar extends ConsumerWidget {
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
-              'assets/images/Settings.svg',
+              'assets/images/tab_icons/Settings.svg',
               width: 24,
               height: 24,
               // ignore: deprecated_member_use

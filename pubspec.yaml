@@ -66,7 +66,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/background.png
-    - assets/images/tab_icons
+    - assets/images/tab_icons/
 
   # To add assets to your application, add an assets section, like this:
   # assets:
