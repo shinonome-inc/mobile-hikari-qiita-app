@@ -8,9 +8,13 @@ class _BottomNavigationBar extends ConsumerWidget {
 
     return Container(
       decoration: const BoxDecoration(
-        border: Border(
-          top: BorderSide(width: 1.0, color: Color.fromRGBO(0, 0, 0, 0.3)),
-        ),
+        boxShadow: [
+          BoxShadow(
+            color: Color.fromRGBO(0, 0, 0, 0.3),
+            offset: Offset(0, -0.5),
+            blurRadius: 0,
+          ),
+        ],
       ),
       child: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
