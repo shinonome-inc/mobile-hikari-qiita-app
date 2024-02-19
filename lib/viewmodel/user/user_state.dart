@@ -25,9 +25,9 @@ class UserState with _$UserState {
     return s;
   }
 
-  late final int id = source.id;
-  late final String name = source.name;
-  late final String description = source.description;
+  late final String id = source.id;
+  late final String? name = source.name;
+  late final String? description = source.description;
   late final int followeesCount = source.followeesCount;
   late final int followersCount = source.followersCount;
   late final String profileImageUrl = source.profileImageUrl;

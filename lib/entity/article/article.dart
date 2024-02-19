@@ -7,18 +7,11 @@ part 'article.freezed.dart';
 @freezed
 class Article with _$Article {
   const factory Article({
-    @JsonKey(name: "id") //
-    required int id,
-    @JsonKey(name: "title") //
-    required String title,
-    @JsonKey(name: "description") //
-    required String description,
-    @JsonKey(name: "likes_count") //
-    required int likesCount,
-    @JsonKey(name: "created_at") //
-    required String createdAt,
-    @JsonKey(name: "user") //
-    required User user,
+    @JsonKey(name: 'id') required String id,
+    @JsonKey(name: 'title') required String title,
+    @JsonKey(name: 'likes_count') required int likesCount,
+    @JsonKey(name: 'created_at') required String createdAt,
+    @JsonKey(name: 'user') required User user,
   }) = _Create;
 
   factory Article.fromJson(Map<String, dynamic> json) =>

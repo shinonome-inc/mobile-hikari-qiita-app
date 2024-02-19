@@ -7,9 +7,9 @@ part of 'user.dart';
 // **************************************************************************
 
 _$_Create _$$_CreateFromJson(Map<String, dynamic> json) => _$_Create(
-      id: json['id'] as int,
-      name: json['name'] as String,
-      description: json['description'] as String,
+      id: json['id'] as String,
+      name: json['name'] as String? ?? '',
+      description: json['description'] as String? ?? '',
       followeesCount: json['followees_count'] as int,
       followersCount: json['followers_count'] as int,
       profileImageUrl: json['profile_image_url'] as String,

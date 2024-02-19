@@ -20,17 +20,15 @@ Article _$ArticleFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Article {
-  @JsonKey(name: "id")
-  int get id => throw _privateConstructorUsedError;
-  @JsonKey(name: "title")
+  @JsonKey(name: 'id')
+  String get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'title')
   String get title => throw _privateConstructorUsedError;
-  @JsonKey(name: "description")
-  String get description => throw _privateConstructorUsedError;
-  @JsonKey(name: "likes_count")
+  @JsonKey(name: 'likes_count')
   int get likesCount => throw _privateConstructorUsedError;
-  @JsonKey(name: "created_at")
+  @JsonKey(name: 'created_at')
   String get createdAt => throw _privateConstructorUsedError;
-  @JsonKey(name: "user")
+  @JsonKey(name: 'user')
   User get user => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -44,12 +42,11 @@ abstract class $ArticleCopyWith<$Res> {
       _$ArticleCopyWithImpl<$Res, Article>;
   @useResult
   $Res call(
-      {@JsonKey(name: "id") int id,
-      @JsonKey(name: "title") String title,
-      @JsonKey(name: "description") String description,
-      @JsonKey(name: "likes_count") int likesCount,
-      @JsonKey(name: "created_at") String createdAt,
-      @JsonKey(name: "user") User user});
+      {@JsonKey(name: 'id') String id,
+      @JsonKey(name: 'title') String title,
+      @JsonKey(name: 'likes_count') int likesCount,
+      @JsonKey(name: 'created_at') String createdAt,
+      @JsonKey(name: 'user') User user});
 
   $UserCopyWith<$Res> get user;
 }
@@ -69,7 +66,6 @@ class _$ArticleCopyWithImpl<$Res, $Val extends Article>
   $Res call({
     Object? id = null,
     Object? title = null,
-    Object? description = null,
     Object? likesCount = null,
     Object? createdAt = null,
     Object? user = null,
@@ -78,14 +74,10 @@ class _$ArticleCopyWithImpl<$Res, $Val extends Article>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      description: null == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
               as String,
       likesCount: null == likesCount
           ? _value.likesCount
@@ -118,12 +110,11 @@ abstract class _$$_CreateCopyWith<$Res> implements $ArticleCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: "id") int id,
-      @JsonKey(name: "title") String title,
-      @JsonKey(name: "description") String description,
-      @JsonKey(name: "likes_count") int likesCount,
-      @JsonKey(name: "created_at") String createdAt,
-      @JsonKey(name: "user") User user});
+      {@JsonKey(name: 'id') String id,
+      @JsonKey(name: 'title') String title,
+      @JsonKey(name: 'likes_count') int likesCount,
+      @JsonKey(name: 'created_at') String createdAt,
+      @JsonKey(name: 'user') User user});
 
   @override
   $UserCopyWith<$Res> get user;
@@ -141,7 +132,6 @@ class __$$_CreateCopyWithImpl<$Res>
   $Res call({
     Object? id = null,
     Object? title = null,
-    Object? description = null,
     Object? likesCount = null,
     Object? createdAt = null,
     Object? user = null,
@@ -150,14 +140,10 @@ class __$$_CreateCopyWithImpl<$Res>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      description: null == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
               as String,
       likesCount: null == likesCount
           ? _value.likesCount
@@ -179,38 +165,34 @@ class __$$_CreateCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Create implements _Create {
   const _$_Create(
-      {@JsonKey(name: "id") required this.id,
-      @JsonKey(name: "title") required this.title,
-      @JsonKey(name: "description") required this.description,
-      @JsonKey(name: "likes_count") required this.likesCount,
-      @JsonKey(name: "created_at") required this.createdAt,
-      @JsonKey(name: "user") required this.user});
+      {@JsonKey(name: 'id') required this.id,
+      @JsonKey(name: 'title') required this.title,
+      @JsonKey(name: 'likes_count') required this.likesCount,
+      @JsonKey(name: 'created_at') required this.createdAt,
+      @JsonKey(name: 'user') required this.user});
 
   factory _$_Create.fromJson(Map<String, dynamic> json) =>
       _$$_CreateFromJson(json);
 
   @override
-  @JsonKey(name: "id")
-  final int id;
+  @JsonKey(name: 'id')
+  final String id;
   @override
-  @JsonKey(name: "title")
+  @JsonKey(name: 'title')
   final String title;
   @override
-  @JsonKey(name: "description")
-  final String description;
-  @override
-  @JsonKey(name: "likes_count")
+  @JsonKey(name: 'likes_count')
   final int likesCount;
   @override
-  @JsonKey(name: "created_at")
+  @JsonKey(name: 'created_at')
   final String createdAt;
   @override
-  @JsonKey(name: "user")
+  @JsonKey(name: 'user')
   final User user;
 
   @override
   String toString() {
-    return 'Article(id: $id, title: $title, description: $description, likesCount: $likesCount, createdAt: $createdAt, user: $user)';
+    return 'Article(id: $id, title: $title, likesCount: $likesCount, createdAt: $createdAt, user: $user)';
   }
 
   @override
@@ -220,8 +202,6 @@ class _$_Create implements _Create {
             other is _$_Create &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.title, title) || other.title == title) &&
-            (identical(other.description, description) ||
-                other.description == description) &&
             (identical(other.likesCount, likesCount) ||
                 other.likesCount == likesCount) &&
             (identical(other.createdAt, createdAt) ||
@@ -231,8 +211,8 @@ class _$_Create implements _Create {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, id, title, description, likesCount, createdAt, user);
+  int get hashCode =>
+      Object.hash(runtimeType, id, title, likesCount, createdAt, user);
 
   @JsonKey(ignore: true)
   @override
@@ -250,32 +230,28 @@ class _$_Create implements _Create {
 
 abstract class _Create implements Article {
   const factory _Create(
-      {@JsonKey(name: "id") required final int id,
-      @JsonKey(name: "title") required final String title,
-      @JsonKey(name: "description") required final String description,
-      @JsonKey(name: "likes_count") required final int likesCount,
-      @JsonKey(name: "created_at") required final String createdAt,
-      @JsonKey(name: "user") required final User user}) = _$_Create;
+      {@JsonKey(name: 'id') required final String id,
+      @JsonKey(name: 'title') required final String title,
+      @JsonKey(name: 'likes_count') required final int likesCount,
+      @JsonKey(name: 'created_at') required final String createdAt,
+      @JsonKey(name: 'user') required final User user}) = _$_Create;
 
   factory _Create.fromJson(Map<String, dynamic> json) = _$_Create.fromJson;
 
   @override
-  @JsonKey(name: "id")
-  int get id;
+  @JsonKey(name: 'id')
+  String get id;
   @override
-  @JsonKey(name: "title")
+  @JsonKey(name: 'title')
   String get title;
   @override
-  @JsonKey(name: "description")
-  String get description;
-  @override
-  @JsonKey(name: "likes_count")
+  @JsonKey(name: 'likes_count')
   int get likesCount;
   @override
-  @JsonKey(name: "created_at")
+  @JsonKey(name: 'created_at')
   String get createdAt;
   @override
-  @JsonKey(name: "user")
+  @JsonKey(name: 'user')
   User get user;
   @override
   @JsonKey(ignore: true)

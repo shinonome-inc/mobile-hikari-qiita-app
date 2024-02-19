@@ -20,17 +20,17 @@ User _$UserFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$User {
-  @JsonKey(name: "id")
-  int get id => throw _privateConstructorUsedError;
-  @JsonKey(name: "name")
+  @JsonKey(name: 'id')
+  String get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'name')
   String get name => throw _privateConstructorUsedError;
-  @JsonKey(name: "description")
+  @JsonKey(name: 'description')
   String get description => throw _privateConstructorUsedError;
-  @JsonKey(name: "followees_count")
+  @JsonKey(name: 'followees_count')
   int get followeesCount => throw _privateConstructorUsedError;
-  @JsonKey(name: "followers_count")
+  @JsonKey(name: 'followers_count')
   int get followersCount => throw _privateConstructorUsedError;
-  @JsonKey(name: "profile_image_url")
+  @JsonKey(name: 'profile_image_url')
   String get profileImageUrl => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -44,12 +44,12 @@ abstract class $UserCopyWith<$Res> {
       _$UserCopyWithImpl<$Res, User>;
   @useResult
   $Res call(
-      {@JsonKey(name: "id") int id,
-      @JsonKey(name: "name") String name,
-      @JsonKey(name: "description") String description,
-      @JsonKey(name: "followees_count") int followeesCount,
-      @JsonKey(name: "followers_count") int followersCount,
-      @JsonKey(name: "profile_image_url") String profileImageUrl});
+      {@JsonKey(name: 'id') String id,
+      @JsonKey(name: 'name') String name,
+      @JsonKey(name: 'description') String description,
+      @JsonKey(name: 'followees_count') int followeesCount,
+      @JsonKey(name: 'followers_count') int followersCount,
+      @JsonKey(name: 'profile_image_url') String profileImageUrl});
 }
 
 /// @nodoc
@@ -76,7 +76,7 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -108,12 +108,12 @@ abstract class _$$_CreateCopyWith<$Res> implements $UserCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: "id") int id,
-      @JsonKey(name: "name") String name,
-      @JsonKey(name: "description") String description,
-      @JsonKey(name: "followees_count") int followeesCount,
-      @JsonKey(name: "followers_count") int followersCount,
-      @JsonKey(name: "profile_image_url") String profileImageUrl});
+      {@JsonKey(name: 'id') String id,
+      @JsonKey(name: 'name') String name,
+      @JsonKey(name: 'description') String description,
+      @JsonKey(name: 'followees_count') int followeesCount,
+      @JsonKey(name: 'followers_count') int followersCount,
+      @JsonKey(name: 'profile_image_url') String profileImageUrl});
 }
 
 /// @nodoc
@@ -136,7 +136,7 @@ class __$$_CreateCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$_Create>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -165,33 +165,33 @@ class __$$_CreateCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$_Create>
 @JsonSerializable()
 class _$_Create implements _Create {
   const _$_Create(
-      {@JsonKey(name: "id") required this.id,
-      @JsonKey(name: "name") required this.name,
-      @JsonKey(name: "description") required this.description,
-      @JsonKey(name: "followees_count") required this.followeesCount,
-      @JsonKey(name: "followers_count") required this.followersCount,
-      @JsonKey(name: "profile_image_url") required this.profileImageUrl});
+      {@JsonKey(name: 'id') required this.id,
+      @JsonKey(name: 'name') this.name = '',
+      @JsonKey(name: 'description') this.description = '',
+      @JsonKey(name: 'followees_count') required this.followeesCount,
+      @JsonKey(name: 'followers_count') required this.followersCount,
+      @JsonKey(name: 'profile_image_url') required this.profileImageUrl});
 
   factory _$_Create.fromJson(Map<String, dynamic> json) =>
       _$$_CreateFromJson(json);
 
   @override
-  @JsonKey(name: "id")
-  final int id;
+  @JsonKey(name: 'id')
+  final String id;
   @override
-  @JsonKey(name: "name")
+  @JsonKey(name: 'name')
   final String name;
   @override
-  @JsonKey(name: "description")
+  @JsonKey(name: 'description')
   final String description;
   @override
-  @JsonKey(name: "followees_count")
+  @JsonKey(name: 'followees_count')
   final int followeesCount;
   @override
-  @JsonKey(name: "followers_count")
+  @JsonKey(name: 'followers_count')
   final int followersCount;
   @override
-  @JsonKey(name: "profile_image_url")
+  @JsonKey(name: 'profile_image_url')
   final String profileImageUrl;
 
   @override
@@ -237,33 +237,33 @@ class _$_Create implements _Create {
 
 abstract class _Create implements User {
   const factory _Create(
-      {@JsonKey(name: "id") required final int id,
-      @JsonKey(name: "name") required final String name,
-      @JsonKey(name: "description") required final String description,
-      @JsonKey(name: "followees_count") required final int followeesCount,
-      @JsonKey(name: "followers_count") required final int followersCount,
-      @JsonKey(name: "profile_image_url")
+      {@JsonKey(name: 'id') required final String id,
+      @JsonKey(name: 'name') final String name,
+      @JsonKey(name: 'description') final String description,
+      @JsonKey(name: 'followees_count') required final int followeesCount,
+      @JsonKey(name: 'followers_count') required final int followersCount,
+      @JsonKey(name: 'profile_image_url')
       required final String profileImageUrl}) = _$_Create;
 
   factory _Create.fromJson(Map<String, dynamic> json) = _$_Create.fromJson;
 
   @override
-  @JsonKey(name: "id")
-  int get id;
+  @JsonKey(name: 'id')
+  String get id;
   @override
-  @JsonKey(name: "name")
+  @JsonKey(name: 'name')
   String get name;
   @override
-  @JsonKey(name: "description")
+  @JsonKey(name: 'description')
   String get description;
   @override
-  @JsonKey(name: "followees_count")
+  @JsonKey(name: 'followees_count')
   int get followeesCount;
   @override
-  @JsonKey(name: "followers_count")
+  @JsonKey(name: 'followers_count')
   int get followersCount;
   @override
-  @JsonKey(name: "profile_image_url")
+  @JsonKey(name: 'profile_image_url')
   String get profileImageUrl;
   @override
   @JsonKey(ignore: true)

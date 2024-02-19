@@ -26,9 +26,8 @@ class ArticleState with _$ArticleState {
     return s;
   }
 
-  late final int id = source.id;
+  late final String id = source.id;
   late final String title = source.title;
-  late final String description = source.description;
   late final int likesCount = source.likesCount;
   late final String createdAt = source.createdAt;
   late final User user = source.user;
