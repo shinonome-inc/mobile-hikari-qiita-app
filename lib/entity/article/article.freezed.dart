@@ -163,13 +163,14 @@ class __$$_CreateCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Create implements _Create {
-  const _$_Create(
+class _$_Create extends _Create {
+  _$_Create(
       {@JsonKey(name: 'id') required this.id,
       @JsonKey(name: 'title') required this.title,
       @JsonKey(name: 'likes_count') required this.likesCount,
       @JsonKey(name: 'created_at') required this.createdAt,
-      @JsonKey(name: 'user') required this.user});
+      @JsonKey(name: 'user') required this.user})
+      : super._();
 
   factory _$_Create.fromJson(Map<String, dynamic> json) =>
       _$$_CreateFromJson(json);
@@ -228,13 +229,14 @@ class _$_Create implements _Create {
   }
 }
 
-abstract class _Create implements Article {
-  const factory _Create(
+abstract class _Create extends Article {
+  factory _Create(
       {@JsonKey(name: 'id') required final String id,
       @JsonKey(name: 'title') required final String title,
       @JsonKey(name: 'likes_count') required final int likesCount,
       @JsonKey(name: 'created_at') required final String createdAt,
       @JsonKey(name: 'user') required final User user}) = _$_Create;
+  _Create._() : super._();
 
   factory _Create.fromJson(Map<String, dynamic> json) = _$_Create.fromJson;
 

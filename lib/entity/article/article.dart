@@ -6,7 +6,9 @@ part 'article.freezed.dart';
 
 @freezed
 class Article with _$Article {
-  const factory Article({
+  Article._();
+
+  factory Article({
     @JsonKey(name: 'id') //
     required String id,
     @JsonKey(name: 'title') //
@@ -18,6 +20,13 @@ class Article with _$Article {
     @JsonKey(name: 'user') //
     required User user,
   }) = _Create;
+
+  String get formattedCreatedAt {
+    final dateTime = DateTime.parse(createdAt);
+    // Format the date as needed (e.g., 'yyyy/MM/dd')
+    final formattedDate = "${dateTime.year}/${dateTime.month}/${dateTime.day}";
+    return formattedDate;
+  }
 
   factory Article.fromJson(Map<String, dynamic> json) =>
       _$ArticleFromJson(json);
